@@ -66,7 +66,7 @@ class CurrencyConversionViewModel(private val dataSourceRemote: DataSourceRemote
                 CurrencyConversions.convertCurrency(it, currencyOrigin.value!!, currencyDestiny.value!!,  conversionNumber.value!!)
             }
 
-            val symbol = CurrencyConversions.getSymbol(currencyOrigin.value!!)
+            val symbol = CurrencyConversions.getSymbol(currencyDestiny.value!!)
 
             _textConversionsDisplay.value =  "$symbol ${String.format("%.2f", dolar)}"
         }

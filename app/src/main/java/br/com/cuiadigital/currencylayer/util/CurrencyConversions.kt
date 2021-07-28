@@ -10,15 +10,14 @@ class CurrencyConversions {
             val valueQuoteOrigin = codeToDolarQuote(listQuotes, originCode)
             val valueQuoteDesity = codeToDolarQuote(listQuotes, destinyCode)
 
-            val dolar: Double = convertToDolar(valueQuoteOrigin, conversionNumber)
+            val dolar: Double = convertToDolar(valueQuoteOrigin)
             val valueConverted = valueQuoteDesity * dolar * conversionNumber
 
             return valueConverted
         }
 
-        private fun convertToDolar(valueQuoteOrigin: Double, conversionNumber: Double): Double {
-            if (valueQuoteOrigin >= DOLAR) return DOLAR / valueQuoteOrigin
-            return valueQuoteOrigin / DOLAR
+        private fun convertToDolar(valueQuoteOrigin: Double): Double {
+             return DOLAR / valueQuoteOrigin
         }
 
         fun codeToDolarQuote(listQuotes: List<Quote>, code: String): Double {
