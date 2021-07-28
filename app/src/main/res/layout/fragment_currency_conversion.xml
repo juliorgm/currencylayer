@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".ui.fragments.currency_conversion.CurrencyConversionFragment">
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_value_conversion"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_value_conversion"
+            android:inputType="numberDecimal"
+            tools:text="5.00" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txt_label_origin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/txt_origin_currency"
+        android:textAlignment="center"
+        android:textColor="@color/orange_700"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_label_destiny"
+        app:layout_constraintStart_toStartOf="@+id/til_value_conversion"
+        app:layout_constraintTop_toBottomOf="@+id/til_value_conversion" />
+
+    <TextView
+        android:id="@+id/txt_label_destiny"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/txt_destiny_currency"
+        android:textAlignment="center"
+        android:textColor="@color/orange_700"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/til_value_conversion"
+        app:layout_constraintStart_toEndOf="@+id/txt_label_origin"
+        app:layout_constraintTop_toBottomOf="@+id/til_value_conversion" />
+
+    <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_origin"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="R$ 55,00" />
+
+    <TextView
+        android:id="@+id/txt_origin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custon_ripple"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="12dp"
+        android:textAlignment="center"
+        android:text="@string/button_choose_currency"
+        app:layout_constraintEnd_toEndOf="@+id/txt_label_origin"
+        app:layout_constraintStart_toStartOf="@+id/txt_label_origin"
+        app:layout_constraintTop_toBottomOf="@+id/txt_label_origin" />
+
+    <TextView
+        android:id="@+id/txt_destiny"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custon_ripple"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="12dp"
+        android:text="@string/button_choose_currency"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/txt_label_destiny"
+        app:layout_constraintStart_toStartOf="@+id/txt_label_destiny"
+        app:layout_constraintTop_toBottomOf="@+id/txt_label_destiny" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

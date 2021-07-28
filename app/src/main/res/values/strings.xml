@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Conversor de Moedas</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Converter</string>
+    <string name="tab_text_2">Moedas</string>
+    <string name="input_value_conversion">Informe o valor</string>
+    <string name="txt_origin_currency">Moeda de origem</string>
+    <string name="txt_destiny_currency">Moeda de destino</string>
+    <string name="hint_search">Pesquisar</string>
+    <string name="message_erro">Erro ao realizar a consulta</string>
+    <string name="search_settings">Configurações de pesquisa</string>
+    <string name="search_option_name">Nome da moeda</string>
+    <string name="search_option_code">Código da Moeda</string>
+    <string name="message_loading">Carregando dados</string>
+    <string name="message_list_empty">Nenhum valor encontrado</string>
+    <string name="filter_settings">Configuração da pesquisa</string>
+    <string name="button_choose_currency">Escolha aqui</string>
+
+</resources>
